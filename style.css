@@ -5,14 +5,25 @@
     box-sizing: border-box;
 }
 body {
+    background: #ffe5ec;
     font-family: 'Montserrat', sans-serif;
-}
-h1 {
     font-weight: 300;
 }
-h2 {
+h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
+    margin: 0 0 15px;
+} 
+#main {
+    background-image: linear-gradient(#ff0248, #ff6d31);
+    width: 90%;
+    padding: 35px 25px 25px;
+    margin: 25px auto 0;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #ddd;
 }
-h4 {
+#main h1 {
+    color: #fff;
+    font-size: 25px;
+    margin-bottom: 20px;
     font-weight: 900;
 }
