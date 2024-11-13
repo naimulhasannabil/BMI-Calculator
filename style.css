@@ -38,6 +38,16 @@ h6 {
   margin-bottom: 20px;
   font-weight: 900;
 }
+#main h2 {
+    background: #ddd;
+  color: #262626;
+  display: inline-block;
+  font-size: 50px;
+  margin-bottom: 0px;
+  font-weight: 900;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
 #main form {
   margin: 15px 0;
 }
@@ -84,3 +94,6 @@ h6 {
 .info {
     margin-top: 20px;
 }
+/* .result {
+     display: none;
+} */
