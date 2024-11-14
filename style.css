@@ -1,133 +1,183 @@
+/* General Reset */
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
-  list-style: none;
   box-sizing: border-box;
 }
 
+/* Body and Font */
 body {
-  background: #fff;
+  background: #f3f4f6;
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #333;
 }
 
-::placeholder {
-  color: #fff;
-  opacity: 1;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 600;
-  margin: 0 0 15px;
-}
-
+/* Main Container */
 #main {
-  background-image: linear-gradient(#54a0ff, #48dbfb);
+  background: #fff;
   width: 90%;
-  padding: 35px 25px 25px;
-  margin: 25px auto 0;
-  border-radius: 20px;
-  box-shadow: 0 0 10px #ddd;
+  max-width: 500px;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Heading Styles */
 #main h1 {
-  color: #fff;
-  font-size: 25px;
+  color: #007bff;
+  font-size: 24px;
   margin-bottom: 20px;
   font-weight: 900;
+  text-align: center;
 }
 
-#main h2 {
-  background: #ddd;
-  color: #262626;
-  display: inline-block;
-  font-size: 50px;
-  margin-bottom: 0;
-  font-weight: 900;
-  padding: 10px 15px;
-  border-radius: 5px;
+/* Form Styling */
+#form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-#main form {
-  margin: 15px 0;
-}
-
-#main label {
-  color: #fff;
+#form label {
   font-size: 14px;
   font-weight: 600;
-  display: block;
+  color: #333;
+  margin-bottom: 3px;
 }
 
-#main input {
-  background-image: linear-gradient(#2e86de, #0abde3);
-  border: 0;
-  border-radius: 5px;
-  color: #fff;
-  font-size: 15px;
+/* Input and Select Styling */
+#form input[type="number"],
+#form select {
   width: 100%;
-  padding: 10px 15px;
-  margin: 10px 0;
+  padding: 12px;
+  font-size: 15px;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s;
 }
 
-#main input:focus {
+#form input[type="number"]:focus,
+#form select:focus {
+  border-color: #007bff;
   outline: none;
 }
 
-#Choose {
-  margin-top: 5px;
+#form input[type="number"]::placeholder {
+  color: #aaa;
 }
 
+/* Dropdown Styling */
 #heightOption,
-#weightOption,
-#main button {
-  background: #fff;
-  color: #262626;
-  border: 0;
-  padding: 10px 25px;
-  border-radius: 5px;
-  margin-top: 5px;
-  font-weight: 600;
+#weightOption {
+  appearance: none;
+  background-color: #f9fafb;
+  color: #333;
   cursor: pointer;
-  transition: 0.5s;
-  outline: none;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
 
-#main button:hover,
-#heightOption:hover,
-#weightOption:hover {
-  background: #ddd;
+#heightOption::after,
+#weightOption::after {
+  content: '▼';
+  font-size: 12px;
+  color: #888;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-/* Result section */
-.result,
-.info {
-  background: #fff;
-  padding: 20px 15px;
-  border-radius: 5px;
+/* Button Styling */
+#button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.3s;
 }
 
-.info {
-  margin-top: 20px;
+#button:hover {
+  background: #0056b3;
 }
 
+/* Result Display */
 .result {
   display: none;
+  margin-top: 20px;
+  text-align: center;
 }
 
-/* Custom styling for height input toggle */
-#height1 {
-  display: block; /* Default: visible for CM and M options */
+.result h4 {
+  font-size: 16px;
+  color: #555;
 }
 
-#height,
-#height2 {
-  display: none; /* Hidden by default; shown only for Inch option */
+#score {
+  font-size: 40px;
+  color: #007bff;
+  background: #f9fafb;
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+/* BMI Weight Guide */
+.info {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f1f5f9;
+  border-radius: 8px;
+  border-left: 4px solid #007bff;
+}
+
+.info h4 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.info p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  body {
+    padding: 15px;
+  }
+
+  #main {
+    padding: 20px;
+    width: 100%;
+  }
+
+  #form input[type="number"],
+  #form select,
+  #button {
+    padding: 12px;
+  }
+
+  #button {
+    font-size: 14px;
+  }
+
+  #score {
+    font-size: 30px;
+  }
 }
