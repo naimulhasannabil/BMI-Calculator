@@ -5,19 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BMI Calculator</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300:600:900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300:600:900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="main">
       <h1>BMI Calculator</h1>
       <form action="" id="form">
         <label for="height">Height</label>
-        <input id="height" type="number" placeholder="In Foot" />
-        <input id="height2" type="number" placeholder="In inch" />
-        <label for="Weight">Weight</label>
-        <input id="Weight" type="number" placeholder="In KG" />
+        <label id="Choose" for="heightOption">Choose an Option:</label>
+        <select id="heightOption" name="heightOption">
+          <option value="CM">CM</option>
+          <option value="M">M</option>
+          <option value="Inch">Inch</option>
+        </select>
+
+        <input
+          id="height1"
+          type="number"
+          placeholder="Enter height in CM or M or Inch"
+        />
+        <input
+          id="height"
+          type="number"
+          placeholder="In Foot"
+          style="display: none"
+        />
+        <input
+          id="height2"
+          type="number"
+          placeholder="In inch"
+          style="display: none"
+        />
+
+        <label for="weight">Weight</label>
+        <label id="Choose" for="weightOption">Choose an Option:</label>
+        <select id="weightOption" name="weightOption">
+          <option value="KG">KG</option>
+          <option value="LB">LB</option>
+        </select>
+        <input id="Weight" type="number" placeholder="Enter weight" />
+
         <button id="button" type="button">Calculate</button>
       </form>
       <div class="result">
@@ -26,9 +58,9 @@
       </div>
       <div class="info">
         <h4>BMI Weight Guide</h4>
-        <p>Under Weight = Less than 18.6</p>
+        <p>Underweight = Less than 18.6</p>
         <p>Normal Range = 18.6 and 24.9</p>
-        <p>OverWeight = Greater than 24.9</p>
+        <p>Overweight = Greater than 24.9</p>
       </div>
     </div>
 

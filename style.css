@@ -6,15 +6,18 @@
   list-style: none;
   box-sizing: border-box;
 }
+
 body {
   background: #fff;
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
 }
+
 ::placeholder {
   color: #fff;
   opacity: 1;
 }
+
 h1,
 h2,
 h3,
@@ -24,6 +27,7 @@ h6 {
   font-weight: 600;
   margin: 0 0 15px;
 }
+
 #main {
   background-image: linear-gradient(#54a0ff, #48dbfb);
   width: 90%;
@@ -32,34 +36,39 @@ h6 {
   border-radius: 20px;
   box-shadow: 0 0 10px #ddd;
 }
+
 #main h1 {
   color: #fff;
   font-size: 25px;
   margin-bottom: 20px;
   font-weight: 900;
 }
+
 #main h2 {
-    background: #ddd;
+  background: #ddd;
   color: #262626;
   display: inline-block;
   font-size: 50px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   font-weight: 900;
   padding: 10px 15px;
   border-radius: 5px;
 }
+
 #main form {
   margin: 15px 0;
 }
+
 #main label {
   color: #fff;
   font-size: 14px;
   font-weight: 600;
   display: block;
 }
+
 #main input {
   background-image: linear-gradient(#2e86de, #0abde3);
-  border: 0px;
+  border: 0;
   border-radius: 5px;
   color: #fff;
   font-size: 15px;
@@ -67,33 +76,58 @@ h6 {
   padding: 10px 15px;
   margin: 10px 0;
 }
+
 #main input:focus {
   outline: none;
 }
+
+#Choose {
+  margin-top: 5px;
+}
+
+#heightOption,
+#weightOption,
 #main button {
   background: #fff;
   color: #262626;
-  border: 0px;
+  border: 0;
   padding: 10px 25px;
   border-radius: 5px;
   margin-top: 5px;
   font-weight: 600;
   cursor: pointer;
   transition: 0.5s;
+  outline: none;
 }
-#main button:hover {
+
+#main button:hover,
+#heightOption:hover,
+#weightOption:hover {
   background: #ddd;
 }
 
+/* Result section */
 .result,
 .info {
   background: #fff;
   padding: 20px 15px;
   border-radius: 5px;
 }
+
 .info {
-    margin-top: 20px;
+  margin-top: 20px;
 }
+
 .result {
-     display: none;
+  display: none;
+}
+
+/* Custom styling for height input toggle */
+#height1 {
+  display: block; /* Default: visible for CM and M options */
+}
+
+#height,
+#height2 {
+  display: none; /* Hidden by default; shown only for Inch option */
 }
